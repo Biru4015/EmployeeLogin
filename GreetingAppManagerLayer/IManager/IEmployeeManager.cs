@@ -1,11 +1,10 @@
-﻿using GreetingAppCommonLayer;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GreetingAppManagerLayer.IManager
+﻿namespace GreetingAppManagerLayer.IManager
 {
+    using GreetingAppCommonLayer;
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Threading.Tasks;
     public interface IEmployeeManager
     {
         Task<int> AddEmployee(GreetingModel employee);

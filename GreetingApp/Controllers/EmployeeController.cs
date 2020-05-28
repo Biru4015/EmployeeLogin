@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using GreetingAppCommonLayer;
-using GreetingAppManagerLayer.IManager;
-using GreetingAppManagerLayer.ManagerImplimentation;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace GreetingApp.Controllers
+﻿namespace GreetingApp.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using GreetingAppCommonLayer;
+    using GreetingAppManagerLayer.IManager;
+    using GreetingAppManagerLayer.ManagerImplimentation;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("api/[controller]")]
     [ApiController]
     public class EmployeeController : ControllerBase

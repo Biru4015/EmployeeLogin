@@ -1,13 +1,12 @@
-﻿using GreetingAppCommonLayer;
-using GreetingAppRepositoryLayer.IReposistory;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using GreetingAppManagerLayer.IManager;
-
-namespace GreetingAppManagerLayer.ManagerImplimentation
+﻿namespace GreetingAppManagerLayer.ManagerImplimentation
 {
+    using GreetingAppCommonLayer;
+    using GreetingAppRepositoryLayer.IReposistory;
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Threading.Tasks;
+    using GreetingAppManagerLayer.IManager;
     public class EmployeeManager : IEmployeeManager
     {
         private readonly IRepo repository;

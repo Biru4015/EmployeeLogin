@@ -1,11 +1,10 @@
-﻿using GreetingAppCommonLayer;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GreetingAppRepositoryLayer.IReposistory
+﻿namespace GreetingAppRepositoryLayer.IReposistory
 {
+    using GreetingAppCommonLayer;
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Threading.Tasks;
     public interface IRepo
     {
         Task<int> AddEmployee(GreetingModel employee);

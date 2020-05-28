@@ -1,8 +1,9 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace GreetingAppCommonLayer
+﻿namespace GreetingAppCommonLayer
 {
+    using System;
+    using System.ComponentModel.DataAnnotations;
+    using System.Collections.Generic;
+    using System.Text;
     public class GreetingModel
     {
         private string id;

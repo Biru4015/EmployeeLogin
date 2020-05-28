@@ -1,13 +1,12 @@
-﻿using GreetingAppCommonLayer;
-using GreetingAppRepositoryLayer.Context;
-using GreetingAppRepositoryLayer.IReposistory;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GreetingAppRepositoryLayer.Repository
+﻿namespace GreetingAppRepositoryLayer.Repository
 {
+    using GreetingAppCommonLayer;
+    using GreetingAppRepositoryLayer.Context;
+    using GreetingAppRepositoryLayer.IReposistory;
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Threading.Tasks;
     public class EmployeeRepository:IRepo
     {
         private readonly UserDatabaseContext userDbContext;
