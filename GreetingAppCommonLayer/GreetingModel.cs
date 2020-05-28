@@ -4,8 +4,15 @@
     using System.ComponentModel.DataAnnotations;
     using System.Collections.Generic;
     using System.Text;
+
+    /// <summary>
+    /// This class contains the code for employee details parameters.
+    /// </summary>
     public class GreetingModel
     {
+        /// <summary>
+        /// Employee id
+        /// </summary>
         private string id;
 
         /// <summary>
