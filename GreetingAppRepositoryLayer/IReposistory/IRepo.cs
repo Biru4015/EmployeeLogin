@@ -2,14 +2,20 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace GreetingAppRepositoryLayer.IReposistory
 {
     public interface IRepo
     {
-        GreetingModel AddEmployee(GreetingModel employee);
+        Task<int> AddEmployee(GreetingModel employee);
+        
+        GreetingModel GetEmployee(int id);
+
+        Task<int> UpdateEmployee(GreetingModel employeeChanges);
+        
         GreetingModel DeleteEmployee(int id);
-        IEnumerable<GreetingModel> GetAllEmployee();
-        GreetingModel UpdateEmployee(GreetingModel employee);
+        
+        IEnumerable<GreetingModel> GetAllEmployees();
     }
 }

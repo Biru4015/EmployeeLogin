@@ -4,48 +4,52 @@ using GreetingAppRepositoryLayer.IReposistory;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace GreetingAppRepositoryLayer.Repository
 {
     public class EmployeeRepository:IRepo
     {
-        private readonly UserDatabaseContext userDBContext;
+        private readonly UserDatabaseContext userDbContext;
 
-        public EmployeeRepository(UserDatabaseContext userDBContext)
+        public EmployeeRepository(UserDatabaseContext userDbContext)
         {
-            this.userDBContext = userDBContext;
+            this.userDbContext = userDbContext;
         }
 
-        public GreetingModel AddEmployee(GreetingModel employee)
+        public Task<int> AddEmployee(GreetingModel employee)
         {
-            userDBContext.Employee.Add(employee);
-            userDBContext.SaveChanges();
-            return employee;
+            userDbContext.Employee.Add(employee);
+            var result = userDbContext.SaveChangesAsync();
+            return result;
+        }
+        public GreetingModel GetEmployee(int id)
+        {
+            return userDbContext.Employee.Find(id);
+        }
+
+        public Task<int> UpdateEmployee(GreetingModel employeeChanges)
+        {
+            var employee = userDbContext.Employee.Attach(employeeChanges);
+            employee.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            var result = userDbContext.SaveChangesAsync();
+            return result;
         }
 
         public GreetingModel DeleteEmployee(int id)
         {
-            GreetingModel employee = userDBContext.Employee.Find(id);
+            GreetingModel employee = userDbContext.Employee.Find(id);
             if (employee != null)
             {
-                userDBContext.Employee.Remove(employee);
-                userDBContext.SaveChanges();
+                userDbContext.Employee.Remove(employee);
+                userDbContext.SaveChanges();
             }
             return employee;
         }
 
-        public GreetingModel UpdateEmployee(GreetingModel employeeChanges)
+        public IEnumerable<GreetingModel> GetAllEmployees()
         {
-
-            var employee = userDBContext.Employee.Attach(employeeChanges);
-            employee.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            userDBContext.SaveChanges();
-            return employeeChanges;
-        }
-
-        public IEnumerable<GreetingModel> GetAllEmployee()
-        {
-            return userDBContext.Employee;
+            return userDbContext.Employee;
         }
     }
 }
