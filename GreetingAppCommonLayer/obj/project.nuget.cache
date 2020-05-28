@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "Xxu17Igav2zY17uXC003cD2dC789SVhkaruqr8PaXgL3gUVbkFnim1eEIr5zu3EAP9Mp9fgW8GZv8JH3C6q3vA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Birendra Kumar\\source\\repos\\GreetingAppCommonLayer\\GreetingAppCommonLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Birendra Kumar\\.nuget\\packages\\microsoft.netcore.app\\2.1.0\\microsoft.netcore.app.2.1.0.nupkg.sha512",
+    "C:\\Users\\Birendra Kumar\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.1.0\\microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",
+    "C:\\Users\\Birendra Kumar\\.nuget\\packages\\microsoft.netcore.dotnethostpolicy\\2.1.0\\microsoft.netcore.dotnethostpolicy.2.1.0.nupkg.sha512",
+    "C:\\Users\\Birendra Kumar\\.nuget\\packages\\microsoft.netcore.dotnethostresolver\\2.1.0\\microsoft.netcore.dotnethostresolver.2.1.0.nupkg.sha512",
+    "C:\\Users\\Birendra Kumar\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
+    "C:\\Users\\Birendra Kumar\\.nuget\\packages\\microsoft.netcore.targets\\2.1.0\\microsoft.netcore.targets.2.1.0.nupkg.sha512",
+    "C:\\Users\\Birendra Kumar\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
+    "C:\\Users\\Birendra Kumar\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
