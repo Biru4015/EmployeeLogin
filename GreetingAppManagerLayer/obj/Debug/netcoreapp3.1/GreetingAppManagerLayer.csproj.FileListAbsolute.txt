@@ -1,0 +1,8 @@
+C:\Users\Birendra Kumar\source\repos\GreetingAppManagerLayer\bin\Debug\netcoreapp3.1\GreetingAppManagerLayer.deps.json
+C:\Users\Birendra Kumar\source\repos\GreetingAppManagerLayer\bin\Debug\netcoreapp3.1\GreetingAppManagerLayer.dll
+C:\Users\Birendra Kumar\source\repos\GreetingAppManagerLayer\bin\Debug\netcoreapp3.1\GreetingAppManagerLayer.pdb
+C:\Users\Birendra Kumar\source\repos\GreetingAppManagerLayer\obj\Debug\netcoreapp3.1\GreetingAppManagerLayer.csprojAssemblyReference.cache
+C:\Users\Birendra Kumar\source\repos\GreetingAppManagerLayer\obj\Debug\netcoreapp3.1\GreetingAppManagerLayer.AssemblyInfoInputs.cache
+C:\Users\Birendra Kumar\source\repos\GreetingAppManagerLayer\obj\Debug\netcoreapp3.1\GreetingAppManagerLayer.AssemblyInfo.cs
+C:\Users\Birendra Kumar\source\repos\GreetingAppManagerLayer\obj\Debug\netcoreapp3.1\GreetingAppManagerLayer.dll
+C:\Users\Birendra Kumar\source\repos\GreetingAppManagerLayer\obj\Debug\netcoreapp3.1\GreetingAppManagerLayer.pdb
