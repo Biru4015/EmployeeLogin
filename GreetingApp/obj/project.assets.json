@@ -4638,6 +4638,21 @@
           "bin/placeholder/GreetingAppCommonLayer.dll": {}
         }
       },
+      "GreetingAppManagerLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "GreetingAppCommonLayer": "1.0.0",
+          "GreetingAppRepositoryLayer": "1.0.0",
+          "Microsoft.OpenApi": "1.1.4"
+        },
+        "compile": {
+          "bin/placeholder/GreetingAppManagerLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GreetingAppManagerLayer.dll": {}
+        }
+      },
       "GreetingAppRepositoryLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -12673,6 +12688,11 @@
       "path": "../GreetingAppCommonLayer/GreetingAppCommonLayer.csproj",
       "msbuildProject": "../GreetingAppCommonLayer/GreetingAppCommonLayer.csproj"
     },
+    "GreetingAppManagerLayer/1.0.0": {
+      "type": "project",
+      "path": "../GreetingAppManagerLayer/GreetingAppManagerLayer.csproj",
+      "msbuildProject": "../GreetingAppManagerLayer/GreetingAppManagerLayer.csproj"
+    },
     "GreetingAppRepositoryLayer/1.0.0": {
       "type": "project",
       "path": "../GreetingAppRepositoryLayer/GreetingAppRepositoryLayer.csproj",
@@ -12681,6 +12701,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "GreetingAppManagerLayer >= 1.0.0",
       "GreetingAppRepositoryLayer >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
@@ -12717,6 +12738,9 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "C:\\Users\\Birendra Kumar\\source\\repos\\GreetingAppManagerLayer\\GreetingAppManagerLayer.csproj": {
+              "projectPath": "C:\\Users\\Birendra Kumar\\source\\repos\\GreetingAppManagerLayer\\GreetingAppManagerLayer.csproj"
+            },
             "C:\\Users\\Birendra Kumar\\source\\repos\\GreetingAppRepositoryLayer\\GreetingAppRepositoryLayer.csproj": {
               "projectPath": "C:\\Users\\Birendra Kumar\\source\\repos\\GreetingAppRepositoryLayer\\GreetingAppRepositoryLayer.csproj"
             }

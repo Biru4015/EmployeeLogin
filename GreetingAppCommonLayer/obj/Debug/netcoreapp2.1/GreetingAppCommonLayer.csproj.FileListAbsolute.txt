@@ -1,0 +1,9 @@
+C:\Users\Birendra Kumar\source\repos\GreetingAppCommonLayer\bin\Debug\netcoreapp2.1\GreetingAppCommonLayer.deps.json
+C:\Users\Birendra Kumar\source\repos\GreetingAppCommonLayer\bin\Debug\netcoreapp2.1\GreetingAppCommonLayer.dll
+C:\Users\Birendra Kumar\source\repos\GreetingAppCommonLayer\bin\Debug\netcoreapp2.1\GreetingAppCommonLayer.pdb
+C:\Users\Birendra Kumar\source\repos\GreetingAppCommonLayer\obj\Debug\netcoreapp2.1\GreetingAppCommonLayer.csprojAssemblyReference.cache
+C:\Users\Birendra Kumar\source\repos\GreetingAppCommonLayer\obj\Debug\netcoreapp2.1\GreetingAppCommonLayer.csproj.CoreCompileInputs.cache
+C:\Users\Birendra Kumar\source\repos\GreetingAppCommonLayer\obj\Debug\netcoreapp2.1\GreetingAppCommonLayer.AssemblyInfoInputs.cache
+C:\Users\Birendra Kumar\source\repos\GreetingAppCommonLayer\obj\Debug\netcoreapp2.1\GreetingAppCommonLayer.AssemblyInfo.cs
+C:\Users\Birendra Kumar\source\repos\GreetingAppCommonLayer\obj\Debug\netcoreapp2.1\GreetingAppCommonLayer.dll
+C:\Users\Birendra Kumar\source\repos\GreetingAppCommonLayer\obj\Debug\netcoreapp2.1\GreetingAppCommonLayer.pdb

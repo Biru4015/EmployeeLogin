@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GreetingAppCommonLayer;
+using GreetingAppManagerLayer.IManager;
+using GreetingAppManagerLayer.ManagerImplimentation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,36 +14,61 @@ namespace GreetingApp.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        //// GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public readonly IEmployeeManager manager;
+        public EmployeeController(EmployeeManager manager)
         {
-            return new string[] { "value1", "value2" };
+            this.manager = manager;
         }
 
-        //// GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
-
-        //// POST api/values
+        [Route("AddEmployee")]
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> AddEmployee(GreetingAppCommonLayer.GreetingModel employee)
         {
+            var result = await this.manager.AddEmployee(employee);
+            if (result == 1)
+            {
+                return this.Ok(employee);
+            }
+            else
+            {
+                return this.BadRequest();
+            }
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [Route("GetEmployee")]
+        [HttpGet]
+        public GreetingModel GetEmployee(int id)
         {
+            return this.manager.GetEmployee(id);
         }
 
-        //// DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [Route("UpdateEmployee")]
+        [HttpPut]
+        public async Task<IActionResult> UpdateEmployee(GreetingModel employeeChanges)
         {
+            var result = await this.manager.UpdateEmployee(employeeChanges);
+            if (result == 1)
+            {
+                return this.Ok(employeeChanges);
+            }
+            else
+            {
+                return this.BadRequest();
+            }
+        }
+
+        [HttpDelete]
+        [Route("DeleteEmployee")]
+        public GreetingModel DeleteEmployee(int id)
+        {
+            return this.manager.DeleteEmployee(id);
+        }
+
+        [Route("GetAllEmployee")]
+        [HttpGet]
+        public IEnumerable<GreetingModel> GetAllEmployees()
+        {
+            return this.manager.GetAllEmployees();
         }
     }
 }
