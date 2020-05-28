@@ -20,3 +20,5 @@ C:\Users\Birendra Kumar\source\repos\GreetingApp\obj\Debug\netcoreapp2.1\Greetin
 C:\Users\Birendra Kumar\source\repos\GreetingApp\obj\Debug\netcoreapp2.1\GreetingApp.dll
 C:\Users\Birendra Kumar\source\repos\GreetingApp\obj\Debug\netcoreapp2.1\GreetingApp.pdb
 C:\Users\Birendra Kumar\source\repos\GreetingApp\obj\Debug\netcoreapp2.1\GreetingApp.genruntimeconfig.cache
+C:\Users\Birendra Kumar\source\repos\GreetingApp\bin\Debug\netcoreapp2.1\GreetingAppManagerLayer.dll
+C:\Users\Birendra Kumar\source\repos\GreetingApp\bin\Debug\netcoreapp2.1\GreetingAppManagerLayer.pdb

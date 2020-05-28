@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GreetingAppManagerLayer\GreetingAppManagerLayer.csproj" />
     <ProjectReference Include="..\GreetingAppRepositoryLayer\GreetingAppRepositoryLayer.csproj" />
   </ItemGroup>
 

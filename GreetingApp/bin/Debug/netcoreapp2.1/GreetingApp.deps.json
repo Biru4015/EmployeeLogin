@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v2.1": {
       "GreetingApp/1.0.0": {
         "dependencies": {
+          "GreetingAppManagerLayer": "1.0.0",
           "GreetingAppRepositoryLayer": "1.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
@@ -367,6 +368,19 @@
         },
         "compile": {
           "GreetingAppCommonLayer.dll": {}
+        }
+      },
+      "GreetingAppManagerLayer/1.0.0": {
+        "dependencies": {
+          "GreetingAppCommonLayer": "1.0.0",
+          "GreetingAppRepositoryLayer": "1.0.0",
+          "Microsoft.OpenApi": "1.1.4"
+        },
+        "runtime": {
+          "GreetingAppManagerLayer.dll": {}
+        },
+        "compile": {
+          "GreetingAppManagerLayer.dll": {}
         }
       },
       "GreetingAppRepositoryLayer/1.0.0": {
@@ -3654,6 +3668,11 @@
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
     },
     "GreetingAppCommonLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GreetingAppManagerLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
