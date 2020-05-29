@@ -9,6 +9,7 @@
     using GreetingAppManagerLayer.ManagerImplimentation;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
+    using Serilog;
 
     /// <summary>
     /// This class contains the code for EmployeeController
@@ -39,6 +40,7 @@
             }
             else
             {
+                Log.Error("Employee was't added");
                 return this.BadRequest();
             }
         }
@@ -52,6 +54,7 @@
         [HttpGet]
         public GreetingModel GetEmployee(int id)
         {
+            Log.Information("Employee with given id is available");
             return this.manager.GetEmployee(id);
         }
 
@@ -70,6 +73,7 @@
             }
             else
             {
+                Log.Information("Employee Updated");
                 return this.BadRequest();
             }
         }
@@ -83,6 +87,7 @@
         [Route("{id}")]
         public GreetingModel DeleteEmployee(int id)
         {
+            Log.Information("Employee with given id is Deleted");
             return this.manager.DeleteEmployee(id);
         }
 
@@ -93,6 +98,7 @@
         [HttpGet]
         public IEnumerable<GreetingModel> GetAllEmployees()
         {
+            Log.Information("All added in list");
             return this.manager.GetAllEmployees();
         }
     }

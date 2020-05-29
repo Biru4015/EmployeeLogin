@@ -11,7 +11,7 @@
     /// <summary>
     /// This class is contains the code for EmployeeRepository class
     /// </summary>
-    public class EmployeeRepository:IRepo
+    public class EmployeeRepository:IEmployeeRepository
     {
         /// <summary>
         /// The userDbContext object

@@ -9,7 +9,7 @@
     /// <summary>
     /// This is interface for EmployeeRepository.
     /// </summary>
-    public interface IRepo
+    public interface IEmployeeRepository
     {
         /// <summary>
         ///  Adds the specified employee

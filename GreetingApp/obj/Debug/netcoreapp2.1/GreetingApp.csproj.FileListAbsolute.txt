@@ -1,5 +1,4 @@
 C:\Users\Birendra Kumar\source\repos\GreetingApp\obj\Debug\netcoreapp2.1\GreetingApp.csprojAssemblyReference.cache
-C:\Users\Birendra Kumar\source\repos\GreetingApp\obj\Debug\netcoreapp2.1\GreetingApp.csproj.CoreCompileInputs.cache
 C:\Users\Birendra Kumar\source\repos\GreetingApp\obj\Debug\netcoreapp2.1\GreetingApp.RazorAssemblyInfo.cache
 C:\Users\Birendra Kumar\source\repos\GreetingApp\obj\Debug\netcoreapp2.1\GreetingApp.RazorAssemblyInfo.cs
 C:\Users\Birendra Kumar\source\repos\GreetingApp\obj\Debug\netcoreapp2.1\GreetingApp.AssemblyInfoInputs.cache

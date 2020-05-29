@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oFk+/Btir4kfSYG8lRf8NqhJDYfbynJfyVMX2vXpC3NzLyAPWXr7oj67causLec1JYLQV3WaFUV28hJepWQ7JQ==",
+  "dgSpecHash": "Jk+Mcng7AHFbljTIuCwNwNGLGN6UKHRrhxb+dFJS3aOlXbRFcbBk6hKqBDpBIz1T5DAn3JIxxEQp2bQFB8l1Sw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Birendra Kumar\\source\\repos\\GreetingApp\\GreetingApp.csproj",
   "expectedPackageFiles": [
@@ -205,6 +205,8 @@
     "C:\\Users\\Birendra Kumar\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Birendra Kumar\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Birendra Kumar\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Birendra Kumar\\.nuget\\packages\\serilog\\2.1.0\\serilog.2.1.0.nupkg.sha512",
+    "C:\\Users\\Birendra Kumar\\.nuget\\packages\\serilog.sinks.file\\2.1.0\\serilog.sinks.file.2.1.0.nupkg.sha512",
     "C:\\Users\\Birendra Kumar\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\4.0.1\\swashbuckle.aspnetcore.swagger.4.0.1.nupkg.sha512",
     "C:\\Users\\Birendra Kumar\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\4.0.1\\swashbuckle.aspnetcore.swaggergen.4.0.1.nupkg.sha512",
     "C:\\Users\\Birendra Kumar\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\4.0.1\\swashbuckle.aspnetcore.swaggerui.4.0.1.nupkg.sha512",

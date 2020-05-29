@@ -16,13 +16,13 @@
         /// <summary>
         /// This method is instance for IRepo.
         /// </summary>
-        private readonly IRepo repository;
+        private readonly IEmployeeRepository repository;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EmployeeManager"/> class.
         /// </summary>
         /// <param name="repository">The repository</param>
-        public EmployeeManager(IRepo repository)
+        public EmployeeManager(IEmployeeRepository repository)
         {
             this.repository = repository;
         }
