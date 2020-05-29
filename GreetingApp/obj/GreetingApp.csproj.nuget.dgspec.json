@@ -47,6 +47,10 @@
             "Microsoft.OpenApi": {
               "target": "Package",
               "version": "[1.1.4, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
             }
           },
           "imports": [
@@ -270,13 +274,21 @@
               "version": "[2.1.0, )",
               "autoReferenced": true
             },
-            "Microsoft.OpenApi": {
-              "target": "Package",
-              "version": "[1.1.4, )"
-            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[2.1.10, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[4.0.1, )"
             }
           },
           "imports": [

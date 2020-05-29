@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v2.1": {
       "GreetingAppCommonLayer/1.0.0": {
         "dependencies": {
-          "Microsoft.OpenApi": "1.1.4"
+          "Microsoft.OpenApi": "1.1.4",
+          "System.ComponentModel.Annotations": "4.7.0"
         },
         "runtime": {
           "GreetingAppCommonLayer.dll": {}
@@ -21,7 +22,8 @@
             "fileVersion": "1.1.4.0"
           }
         }
-      }
+      },
+      "System.ComponentModel.Annotations/4.7.0": {}
     }
   },
   "libraries": {
@@ -36,6 +38,13 @@
       "sha512": "sha512-6SW0tpbJslc8LAY1XniRfLVcJa7bJUbbwvo2/ZRqfkMbJrsqIj9045vg3STtZhDhYRKhpYgjqGU11eeW4Pzyrg==",
       "path": "microsoft.openapi/1.1.4",
       "hashPath": "microsoft.openapi.1.1.4.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
+      "path": "system.componentmodel.annotations/4.7.0",
+      "hashPath": "system.componentmodel.annotations.4.7.0.nupkg.sha512"
     }
   }
 }

@@ -13,7 +13,7 @@
         /// <summary>
         /// Employee id
         /// </summary>
-        private string id;
+        private int id;
 
         /// <summary>
         /// The full name
@@ -23,7 +23,7 @@
         /// <summary>
         /// The age
         /// </summary>
-        private string age;
+        private int age;
 
         /// <summary>
         /// The email identifier
@@ -41,7 +41,9 @@
         /// <value>
         /// The identifier.
         /// </value>
-        public string Id
+        /// 
+        [Key]
+        public int Id
         {
             get
             {
@@ -79,7 +81,7 @@
         /// <value>
         /// The age.
         /// </value>
-        public string Age
+        public int Age
         {
             get
             {
@@ -102,12 +104,12 @@
         {
             get
             {
-                return this.emailId;
+                return this.EmailId;
             }
 
             set
             {
-                this.emailId = value;
+                this.EmailId = value;
             }
         }
 
