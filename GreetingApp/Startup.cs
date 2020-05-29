@@ -34,7 +34,7 @@ namespace GreetingApp
             services.AddDbContextPool<UserDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddTransient<IEmployeeManager, EmployeeManager>();
-            services.AddTransient<IRepo, EmployeeRepository>();
+            services.AddTransient<IEmployeeRepository, EmployeeRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "GreetingApp", Version = "v1" });

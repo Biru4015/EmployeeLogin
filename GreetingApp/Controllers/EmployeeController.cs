@@ -48,7 +48,7 @@
         /// </summary>
         /// <param name="id">The model class employee id</param>
         /// <returns>The employee id</returns>
-        [Route("GetEmployee")]
+        [Route("{id}")]
         [HttpGet]
         public GreetingModel GetEmployee(int id)
         {
@@ -60,7 +60,6 @@
         /// </summary>
         /// <param name="employeeChanges">The model class employeeChanges</param>
         /// <returns>Th async result</returns>
-        [Route("UpdateEmployee")]
         [HttpPut]
         public async Task<IActionResult> UpdateEmployee(GreetingModel employeeChanges)
         {
@@ -81,7 +80,7 @@
         /// <param name="id">The model class employee id</param>
         /// <returns>The id</returns>
         [HttpDelete]
-        [Route("DeleteEmployee")]
+        [Route("{id}")]
         public GreetingModel DeleteEmployee(int id)
         {
             return this.manager.DeleteEmployee(id);
@@ -91,7 +90,6 @@
         /// Gets all the employees details
         /// </summary>
         /// <returns>List of employee </returns>
-        [Route("GetAllEmployee")]
         [HttpGet]
         public IEnumerable<GreetingModel> GetAllEmployees()
         {
