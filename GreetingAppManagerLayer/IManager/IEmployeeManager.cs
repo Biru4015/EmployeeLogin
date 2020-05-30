@@ -44,5 +44,13 @@
         /// </summary>
         /// <returns>List of all employees</returns>
         IEnumerable<GreetingModel> GetAllEmployees();
+
+        /// <summary>
+        /// This is for login functionality of employee
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns>true/false</returns>
+        bool LoginEmployee(string email, string password);
     }
 }

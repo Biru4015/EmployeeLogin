@@ -75,5 +75,16 @@
         {
             return this.repository.GetAllEmployees();
         }
+
+        /// <summary>
+        /// This method is created for Login Fuctionality
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns>ture/false</returns>
+        public bool LoginEmployee(string email, string password)
+        {
+            return this.repository.LoginEmployee(email, password);
+        }
     }
 }
