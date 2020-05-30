@@ -5,6 +5,7 @@
     using GreetingAppRepositoryLayer.IReposistory;
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
 
@@ -85,6 +86,17 @@
         public IEnumerable<GreetingModel> GetAllEmployees()
         {
             return userDbContext.Employee;
+        }
+
+        public bool LoginEmployee(string email, string password)
+        {
+            var result = userDbContext.Employee.Where(id => id.Email == email && id.Password == password);
+
+            if (result != null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

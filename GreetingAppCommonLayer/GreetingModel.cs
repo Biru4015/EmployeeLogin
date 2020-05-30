@@ -4,6 +4,7 @@
     using System.ComponentModel.DataAnnotations;
     using System.Collections.Generic;
     using System.Text;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     /// <summary>
     /// This class contains the code for employee details parameters.
@@ -11,124 +12,148 @@
     public class GreetingModel
     {
         /// <summary>
-        /// Employee id
+        /// The employee identifier
         /// </summary>
-        private int id;
+        private int employeeID;
 
         /// <summary>
-        /// The full name
+        /// The name
         /// </summary>
-        private string fullName;
-
-        /// <summary>
-        /// The age
-        /// </summary>
-        private int age;
+        private string name;
 
         /// <summary>
         /// The email identifier
         /// </summary>
-        private string emailId;
+        private string emailID;
 
         /// <summary>
-        /// The work experience
+        /// The password
         /// </summary>
-        private int workExp;
+        private string password;
 
         /// <summary>
-        /// Gets or sets the identifier.
+        /// The mobile
+        /// </summary>
+        private string mobile;
+
+        /// <summary>
+        /// The address
+        /// </summary>
+        private string address;
+
+        /// <summary>
+        /// Gets or sets the emp identifier.
         /// </summary>
         /// <value>
-        /// The identifier.
+        /// The employee identifier.
         /// </value>
-        /// 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int Id
+        public int EmpID
         {
             get
             {
-                return this.id;
+                return this.employeeID;
             }
 
             set
             {
-                this.id = value;
+                this.employeeID = value;
             }
         }
 
         /// <summary>
-        /// Gets or sets the full name.
+        /// Gets or sets the name.
         /// </summary>
         /// <value>
-        /// The full name.
+        /// The name.
         /// </value>
-        public string FullName
+        public string Name
         {
             get
             {
-                return this.fullName;
+                return this.name;
             }
 
             set
             {
-                this.fullName = value;
+                this.name = value;
             }
         }
 
         /// <summary>
-        /// Gets or sets the age.
+        /// Gets or sets the email.
         /// </summary>
         /// <value>
-        /// The age.
+        /// The email.
         /// </value>
-        public int Age
+        public string Email
         {
             get
             {
-                return this.age;
+                return this.emailID;
             }
 
             set
             {
-                this.age = value;
+                this.emailID = value;
             }
         }
 
         /// <summary>
-        /// Gets or sets the email identifier.
+        /// Gets or sets the password.
         /// </summary>
         /// <value>
-        /// The email identifier.
+        /// The password.
         /// </value>
-        public string EmailId
+        public string Password
         {
             get
             {
-                return this.EmailId;
+                return this.password;
             }
 
             set
             {
-                this.EmailId = value;
+                this.password = value;
             }
         }
 
         /// <summary>
-        /// Gets or sets the work experience.
+        /// Gets or sets the mobile.
         /// </summary>
         /// <value>
-        /// The work experience.
+        /// The mobile.
         /// </value>
-        public int WorkExp
+        public string Mobile
         {
             get
             {
-                return this.workExp;
+                return this.mobile;
             }
 
             set
             {
-                this.workExp = value;
+                this.mobile = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the address.
+        /// </summary>
+        /// <value>
+        /// The address.
+        /// </value>
+        public string Address
+        {
+            get
+            {
+                return this.address;
+            }
+
+            set
+            {
+                this.address = value;
             }
         }
     }
