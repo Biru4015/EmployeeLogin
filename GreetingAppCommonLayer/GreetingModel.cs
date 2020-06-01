@@ -47,7 +47,7 @@
         /// <value>
         /// The employee identifier.
         /// </value>
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+      
         [Key]
         public int EmpID
         {
@@ -68,6 +68,8 @@
         /// <value>
         /// The name.
         /// </value>
+        [MinLength(3)]
+        [Required(ErrorMessage ="Please eneter proper name")]
         public string Name
         {
             get
@@ -87,6 +89,8 @@
         /// <value>
         /// The email.
         /// </value>
+        [Required(ErrorMessage = "Please enter Email ID")]
+        [RegularExpression(@"^([a-z]+)(\.[a-z0-9_\+\-]+)?@([a-z]+)\.([a-z]{2,4})(\.[a-z]{2})?$", ErrorMessage = "Email is not valid.")]
         public string Email
         {
             get
@@ -106,6 +110,8 @@
         /// <value>
         /// The password.
         /// </value>
+        [Required(ErrorMessage = "Please enter valid password")]
+        [RegularExpression(@"^[0-9a-zA-Z]{8,}$", ErrorMessage = "Password is not valid.")]
         public string Password
         {
             get
@@ -125,6 +131,8 @@
         /// <value>
         /// The mobile.
         /// </value>
+        [Required]
+        [MinLength(10),MaxLength(12)]
         public string Mobile
         {
             get
@@ -144,6 +152,8 @@
         /// <value>
         /// The address.
         /// </value>
+        [Required]
+        [MinLength(3)]
         public string Address
         {
             get

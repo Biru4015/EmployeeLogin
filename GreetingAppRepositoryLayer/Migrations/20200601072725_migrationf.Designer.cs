@@ -3,14 +3,16 @@ using GreetingAppRepositoryLayer.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GreetingAppRepositoryLayer.Migrations
 {
     [DbContext(typeof(UserDatabaseContext))]
-    partial class UserDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20200601072725_migrationf")]
+    partial class migrationf
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,21 +26,15 @@ namespace GreetingAppRepositoryLayer.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Address")
-                        .IsRequired();
+                    b.Property<string>("Address");
 
-                    b.Property<string>("Email")
-                        .IsRequired();
+                    b.Property<string>("Email");
 
-                    b.Property<string>("Mobile")
-                        .IsRequired()
-                        .HasMaxLength(12);
+                    b.Property<string>("Mobile");
 
-                    b.Property<string>("Name")
-                        .IsRequired();
+                    b.Property<string>("Name");
 
-                    b.Property<string>("Password")
-                        .IsRequired();
+                    b.Property<string>("Password");
 
                     b.HasKey("EmpID");
 

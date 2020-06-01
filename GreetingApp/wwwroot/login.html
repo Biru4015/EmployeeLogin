@@ -1,54 +1,89 @@
 ﻿﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Employee Management system</title>
-    <link rel="stylesheet" href="Style.css">
+    <meta charset="utf-8" />
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="Style.css" />
 </head>
 <body>
+    <div class="container">
+        <div class="col-md-5 heading">
+            <h1>Employee Management System</h1>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5">
 
-    <div class="login-box">
-        <img src="avatar.jpg" class="avatar" alt="Avatar Image">
-        <h1>Login Here</h1>
-        <form>
-            <label for="username">Username</label>
-            <input type="text" placeholder="Enter Username">
-            <label for="password">Password</label>
-            <input type="password" placeholder="Enter Password">
-            <input type="submit" value="Log In">
-            <a href="#">Lost your Password?</a><br>
-        </form>
+            <div class="login">Login</div>
+
+            <form action="#" name="LoginForm" onsubmit="return validateLogin()">
+                <div class="login-form">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                        <input type="text" class="form-control" name="email" id="LoginEmail" placeholder="Email" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                        <input type="password" class="form-control" name="password" id="LoginPass" placeholder="Password" />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="checkbox" /><small>Remember Me</small>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#" id="forget"><p class="text-right">Forget Password</p></a>
+                        </div>
+                    </div>
+
+                    <div id="errorLogin"></div>
+                    <button type="submit" class="btn btn-default" id="login-button">Login</button>
+                    <p class="text-center">Not a member yet? <a href="#" class="notmember">Sign Up</a></p>
+
+                </div>
+            </form>
+
+        </div>
     </div>
-    <script>
-        checkForm = () => {
-            var canSubmit = true;
-            if (document.getElementById("username").value == "") {
-                canSubmit = false;
-            }
-            if (document.getElementById("password").value == "") {
-                canSubmit = false;
-            }
-            if (canSubmit) {
-                document.getElementById("submitBtn").disabled = false;
-            }
-            else {
-                document.getElementById("submitBtn").disabled = true;
-            }
-        }
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
 
-        validate = () => {
-            if (document.myForm.username.value.length <= 3) {
-                document.getElementById("error").innerHTML = "please enter your correct username";
-                document.myForm.username.focus();
-                return false;
-            }
+        $(function () {
+            $("#login-button").click(function () {
+                //if (document.getElementById("LoginEmail").value.length < 3 || document.getElementById("LoginPass").value.length < 3) {
+                //    document.getElementById("errorLogin").innerHTML = "Email or Password is incorrect";
+                //    document.LoginForm.LoginPass.focus();
+                //    return false;
+                //}
+                event.preventDefault();
+                var data = {
+                    email: document.getElementById("LoginEmail").value,
+                    password: document.getElementById("LoginPass").value
 
-            if (document.myForm.password.value.length <= 3) {
-                document.getElementById("error").innerHTML = "please enter your correct password";
-                document.myForm.password.focus();
-                return false;
+                }
+                //var formData = new FormData()
+                //formData.append("email", $('#LoginEmail').val())
+                //formData.append("password", $('#LoginPass').val())
+                console.log("data", data)
+                var formData = JSON.stringify(data);
+                console.log("formData", formData)
+                $.ajax({
+                    url: 'api/employee/Login',
+                    type: 'POST',
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: formData,
+                    success: function () {
+                        window.location = 'https://localhost:44357/homepage.html';
+                    },
+                    error: function () {
+                        console.log("Login Error!!!");
+                    }
+                });
             }
-
             return true;
         }
     </script>

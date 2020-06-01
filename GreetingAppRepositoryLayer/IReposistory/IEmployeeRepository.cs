@@ -19,7 +19,7 @@
         Task<int> AddEmployee(GreetingModel employee);
 
         /// <summary>
-        ///  Getss the specified employee
+        ///  Gets the specified employee
         /// </summary>
         /// <param name="id">The id</param>
         /// <returns>employee id</returns>

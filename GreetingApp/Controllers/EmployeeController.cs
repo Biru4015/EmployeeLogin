@@ -19,7 +19,7 @@
     public class EmployeeController : ControllerBase
     {
         public readonly IEmployeeManager manager;
-        public EmployeeController(EmployeeManager manager)
+        public EmployeeController(IEmployeeManager manager)
         {
             this.manager = manager;
         }
@@ -29,20 +29,19 @@
         /// </summary>
         /// <param name="employee">The model class employee</param>
         /// <returns>The async result</returns>
-        [Route("AddEmployee")]
         [HttpPost]
-        public async Task<IActionResult> AddEmployee(GreetingAppCommonLayer.GreetingModel employee)
+        public async Task<IActionResult> AddEmployee(GreetingModel employee)
         {
-            var result = await this.manager.AddEmployee(employee);
-            if (result == 1)
-            {
-                return this.Ok(employee);
-            }
-            else
-            {
-                Log.Error("Employee was't added");
-                return this.BadRequest();
-            }
+                var result = await this.manager.AddEmployee(employee);
+                if (result == 1)
+                {
+                    return this.Ok(employee);
+                }
+                else
+                {
+                    Log.Error("This is a bad request");
+                    return this.BadRequest();
+                }
         }
 
         /// <summary>
@@ -63,6 +62,7 @@
         /// </summary>
         /// <param name="employeeChanges">The model class employeeChanges</param>
         /// <returns>Th async result</returns>
+        [Route("UpdateEmployee")]
         [HttpPut]
         public async Task<IActionResult> UpdateEmployee(GreetingModel employeeChanges)
         {
@@ -73,7 +73,7 @@
             }
             else
             {
-                Log.Information("Employee Updated");
+                Log.Error("This is a Bad Request");
                 return this.BadRequest();
             }
         }
@@ -100,6 +100,27 @@
         {
             Log.Information("All added in list");
             return this.manager.GetAllEmployees();
+        }
+
+        /// <summary>
+        /// This method is created for login Employee
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns>true/false</returns>
+        [Route("Login")]
+        [HttpPost]
+        public IActionResult LoginEmployee(GreetingModel model)
+        {
+            var result = this.manager.LoginEmployee(model.Email, model.Password);
+            if (result == true)
+            {
+                return this.Ok(model.Email);
+            }
+            else
+            {
+                return this.BadRequest();
+            }
         }
     }
 }

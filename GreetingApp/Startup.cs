@@ -58,6 +58,8 @@ namespace GreetingApp
             {
                 app.UseHsts();   
             }
+            app.UseStaticFiles();
+            app.UseDefaultFiles();
             app.UseHttpsRedirection();
             app.UseMvc();
         }
