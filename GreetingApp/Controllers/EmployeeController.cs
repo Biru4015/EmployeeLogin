@@ -62,7 +62,7 @@
         /// </summary>
         /// <param name="employeeChanges">The model class employeeChanges</param>
         /// <returns>Th async result</returns>
-        [Route("UpdateEmployee")]
+        //[Route("UpdateEmployee")]
         [HttpPut]
         public async Task<IActionResult> UpdateEmployee(GreetingModel employeeChanges)
         {

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="Main.css" />
+    <!--<link rel="stylesheet" type="text/css" href="Main.css" />-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -26,57 +26,210 @@
             </ul>
         </div>
     </nav>
-    <button class=" fa fa-user-plus btn btn-primary" id="employeebtn">Add Employee</button>
-    <div class="container">
-        <p class="text-white display-4"> NO RECORD FOUND !!</p>
+    <<div class="container">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                &emsp;
+                Add Employee
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <label for="name">Name: &emsp;&nbsp;&nbsp;</label>
+                    <input type="text" id="addname" placeholder="Enter Employee Name"><br><br>
+                </li>
+                <li>
+                    <label for="addemail">Email: &emsp;&nbsp;&nbsp;</label>
+                    <input type="text" id="addemail" placeholder="Enter Email"><br><br>
+                </li>
+                <li>
+                    <label for="addpwd">Password:</label>
+                    <input type="text" id="addpwd" placeholder="Enter Password"><br><br>
+                </li>
+                <li>
+                    <label for="mobile">Mobile:</label>
+                    <input type="text" id="addmobile" placeholder="Enter Mobile"><br><br>
+                </li>
+                <li>
+                    <label for="address">Address:</label>
+                    <input type="text" id="addaddress" placeholder="Enter Address"><br><br>
+                </li>
+
+                <li>
+                    &emsp;&nbsp;<button type="submit" class="btn btn-primary" id="adddatabtn">Add Data</button>
+                </li>
+            </ul>
+        </div>
     </div>
+    <br />
+
     <div class="container">
-        <table class="table table-hover bg-light">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                &emsp;&emsp;&nbsp;
+                Update  &emsp;&nbsp;&nbsp;
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <label for="uei">employeeID:&emsp;&nbsp;&nbsp;</label>
+                    <input type="text" id="uei" placeholder="Enter Employee Id"><br><br>
+                </li>
+                <li>
+                    <label for="name">Name: &emsp;&nbsp;&nbsp;</label>
+                    <input type="text" id="uname" placeholder="Enter Employee Name"><br><br>
+                </li>
+                <li>
+                    <label for="addemail">Email: &emsp;&nbsp;&nbsp;</label>
+                    <input type="text" id="uaddemail" placeholder="Enter Email"><br><br>
+                </li>
+                <li>
+                    <label for="addpwd">Password:</label>
+                    <input type="text" id="uaddpwd" placeholder="Enter Password"><br><br>
+                </li>
+                <li>
+                    <label for="mobile">Mobile:</label>
+                    <input type="text" id="umobile" placeholder="Enter Mobile"><br><br>
+                </li>
+                <li>
+                    <label for="address">Address:</label>
+                    <input type="text" id="uaddress" placeholder="Enter Address"><br><br>
+                </li>
+                <li>
+                    &emsp;&nbsp;<button type="submit" class="btn btn-primary" id="updatebtn">Update Detail</button>
+                </li>
+            </ul>
+        </div>
+    </div>&nbsp&nbsp&nbsp;
+
+    <div class="container">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                &emsp;&emsp;
+                Delete &emsp;&emsp;
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <label for="dei">Emp Id:&emsp;&nbsp;&nbsp;</label>
+                    <input type="text" id="dei" placeholder="Enter Employee Id"><br><br>
+
+                </li>
+                <li>
+                    &emsp;&nbsp;<button type="submit" class="btn btn-primary" id="deletebtn">Delete Employee</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <br />
+    <div class="container">
+        <table class="table table-hover bg-light" id="tblEmployee">
             <thead>
                 <tr>
+                    <th>Employee Id</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>password</th>
-                    <th>Phone</th>
+                    <th>mobile</th>
                     <th>Address</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
             </tbody>
         </table>
     </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "/api/Employee",
+                dataType: "json",
+                method: 'post',
+                success: function (data) {
+                    var employeeTable = $('#tblEmployee tbody');
+                    employeeTable.empty();
+                    $(data).each(function (index, emp) {
+                        employeeTable.append('<tr><td>' +emp.empID +'</td><td>' + emp.name + '</td><td>' + emp.email + '</td><td>' + emp.password + '</td><td>' + emp.mobile + '</td><td>' + emp.address + '</td></tr>');
+
+                    });
+                },
+                error: function (err) {
+                    alert(err);
+                }
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $('#adddatabtn').click(function () {
+            var employee = {};
+            employee.name = $('#addname').val();
+            employee.Email = $('#addemail').val();
+            employee.Password = $('#addpwd').val();
+            employee.mobile = $('#addmobile').val();
+            employee.address = $('#addaddress').val();
+            console.log(JSON.stringify(employee))
+            $.ajax({
+                type: "POST",
+                url: "/api/Employee",
+                data: JSON.stringify(employee),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                processData: true,
+                success: function (data) {
+                    alert("Employee Added Successfully" + data);
+                },
+                error: function (data) {
+                    alert("fill all details");
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $('#updatebtn').click(function () {
+            var uemployee = {};
+            uemployee.Empid = parseInt($('#uei').val());
+            uemployee.name = $('#uname').val();
+            uemployee.Email = $('#uemail').val();
+            uemployee.Password = $('#upassword').val();
+            uemployee.mobile = $('umobile').val();
+            uemployee.address = $('uaddress').val();
+            console.log(JSON.stringify(uemployee))
+            $.ajax({
+                type: "PUT",
+                url: "/api/Employee/UpdateEmployee",
+                data: JSON.stringify(uemployee),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                processData: true,
+                success: function (data) {
+                    alert("Employee Details Updated" + data);
+                },
+                error: function (data) {
+                    alert("fill all details correctly");
+                }
+            });
+        });
+    </script>
+
     <script>
-
-        var xHttp = new XMLHttpRequest();
-        xHttp.open("GET", 'https://localhost:44357//api/employee/GetAllEmployee');
-        xHttp.onload = function () {
-
-            var data = JSON.parse(xHttp.responseText);
-            if (data == null) {
-                document.getElementById("record").style.display == "block";
-            }
-            console.log(data);
-            var html = "";
-            for (var a = 0; a < data.length; a++) {
-                var name = data[a].name;
-                var email = data[a].email;
-                var password = data[a].password;
-                var mobile = data[a].mobile;
-                var address = data[a].address;
-
-                html += "<tr>";
-                html += "<td>" + naame + "</td>";
-                html += "<td>" + email + "</td>";
-                html += "<td>" + password + "</td>";
-                html += "<td>" + mobile + "</td>";
-                html += "<td>" + address + "</td>";
-                html += "</tr>";
-            }
-            document.getElementById("data").innerHTML += html;
-        }
-        xHttp.send();
+        $('#deletebtn').click(function () {
+            var a = $('#dei').val();
+            $.ajax({
+                type: "DELETE",
+                url: "/api/Employee/" + a,
+                dataType: "json",
+                success: function (data) {
+                    alert("Data Deleted " + data);
+                },
+                error: function (xhr) {
+                    alert(xhr.responseText);
+                }
+            });
+        });
     </script>
 </body>
 </html> 
